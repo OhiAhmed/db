@@ -1,0 +1,6 @@
+DELIMITER $$
+CREATE OR REPLACE DEFINER='CASEMGNT.dsuser'@'%' PROCEDURE 'CASEMGNT_SP_DeleteLockedAssignment' (IN 'entityId' INT(255))
+BEGIN
+DELETE FROM CASEMGNT_LockedAssignment WHERE caseId = entityId;
+END$$
+DELIMITER ;
